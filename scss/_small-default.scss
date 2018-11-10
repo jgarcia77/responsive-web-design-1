@@ -19,10 +19,30 @@ body {
 }
 
  /* ---------------------- HEADER ---------------------- */
-header {
+ div#headerWrapper {
     background-color: $primaryColor;
+ }
+
+header {
+    
     color: $secondaryColor;
     padding: 1rem $gutter;
+
+    form {
+        float: right;
+    }
+
+    form input {
+        width: 6rem;
+        border-radius: 10px;
+        margin-right: .2rem;
+        border: none;
+        transition: width .5s;
+    }
+
+    form input:focus {
+        width: 8rem;
+    }
 
     h1 {
         font-size: 2rem;
@@ -36,8 +56,11 @@ header {
 }
 
  /* ---------------------- NAVIGATION ---------------------- */
-nav {
+ div#navWrapper {
     background-color: $secondaryColor;
+ }
+ 
+nav {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
     ul li {
@@ -126,12 +149,29 @@ main {
         margin: .5rem $gutter;
         width: 100% - $gutterdbl;
     }
+
+    div.pop {
+        background-color: $accent;
+        text-align: center;
+        clear: both;
+        padding: 1rem 0;
+        .title { font-size: 2.5rem; }
+        .subtitle { font-size: 2rem; font-weight: $boldWeight; }
+        .copy { padding: .5rem 0; }
+        .copy span {
+            font-size: 3rem;
+            color: $primaryColor;
+            font-weight: $boldWeight;
+        }
+    }
 }
 
  /* ---------------------- FOOTER ---------------------- */
+ div#footerWrapper {
+    background-color: $primaryColor;
+ }
 footer {
     width: 100%;
-    background-color: $primaryColor;
 
     p {
         text-align: center;
